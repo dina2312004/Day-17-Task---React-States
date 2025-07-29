@@ -1,15 +1,13 @@
-import Navbar from "../Navbar/Navbar";
-import Hero from "../Hero/Hero";
-import About from "../About/About";
-import Footer from "../Footer/Footer";
+import Send from "../Send/Send";
+import Timer from "../Timer/Timer";
+
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Footer />
+     <h1>Home</h1>
+     <Send/>
+     <Timer/>
     </>
   );
 }

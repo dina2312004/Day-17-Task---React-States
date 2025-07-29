@@ -1,17 +1,22 @@
-import Navbar from "./components/Navbar/Navbar";
-import Parent from "./components/parent/parent";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import NotFound from "./components/NotFound/NotFound";
 
-
-
-
-function App() {
+export default function App() {
   return (
-    <div>
-     
-      <Navbar/>
-      <Parent/>
-    </div>
-  );
-}
+    <Router>
+      <nav>
+        
+        <Link to="/">Home</Link> |{" "} 
+         <Link to="/about">About</Link>
+      </nav>
 
-export default App;
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
+    );
+    }
